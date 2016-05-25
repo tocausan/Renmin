@@ -1,0 +1,10 @@
+extends index
+
+block structure
+    section(class='row')
+        if error
+            div(class='text-center alert-box alert') #{error}
+        if success
+            div(class='text-center alert-box success') #{success}
+
+        block content

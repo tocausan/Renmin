@@ -1,0 +1,40 @@
+<span class="small-12 medium-6 medium-offset-3 column">
+    <h3>Register</h3>
+    <hr/>
+
+    <form>
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Username</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.username"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Password</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.password"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Password confirmation</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.passconf"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-12 columns text-center">
+                <a class="button info postfix" ng-click="security.register()">Register</a>
+            </span>
+        </span>
+    </form>
+
+</span>

@@ -1,0 +1,37 @@
+extends ../layout/row
+
+block content
+    span(class='small-12 columns')
+        h1(class='text-center') #{title}
+
+        div(class='small-12 columns')
+            div(class='small-6 medium-4 large-2 columns')
+                a(class='button tiny secondary postfix' href='/post') Back
+
+        form(class='small-12 columns' action='/post/create' method='post' enctype='application/x-www-form-urlencoded')
+            input(type='hidden',value='POST',name='_method')
+
+            div(class='small-12 medium-6 medium-offset-3 columns')
+                div(class='small-12 columns')
+                    label(for='category') Category
+                    select(name="category" value=category)
+                        each option in categories
+                            option(value=option.name selected=(status==option.name))= option.name
+
+                div(class='small-12 columns')
+                    label(for='name') Name
+                    input(type='text' id='name' name='name' value=name)
+
+                div(class='small-12 columns')
+                    label(for='description') Description
+                    textarea(id='description' name='description' rows='10')= description
+
+                div(class='small-12 columns')
+                    label(for='display') Display
+                    select(name="display" value=display)
+                        each option in [{value: 'false'}, {value: 'true'}]
+                            option(value=option.value)= option.value
+
+                div(class='small-12 columns')
+                    button(type='submit', class='button tiny success right postfix').
+                        Create

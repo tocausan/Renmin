@@ -1,0 +1,15 @@
+extends ../layout/unrow
+
+block content
+    span(class='small-12')
+
+        - each post in posts
+
+            div(class='parallax-slider' style='min-height: 0px;')
+            span(class='parallax-title small-12 medium-8 medium-offset-2 columns' style='position:absolute; margin-top: 10%;')
+                if post.name
+                    h1(class='text-center')= post.name
+                if post.description
+                    p(class='text-left')= post.description
+
+            div(class='parallax-window' data-parallax='scroll' data-image-src=post.preview_image)

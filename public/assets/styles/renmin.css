@@ -1,0 +1,45 @@
+.renmin html,
+.renmin body{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0px;
+    font-family: lato;
+    font-weight: 200;
+
+    filter: blur(2px);
+    -ms-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -webkit-filter: blur(2px);
+    transition: .3s
+}
+.renmin html:hover,
+.renmin body:hover{
+    filter: blur(0px);
+    -ms-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+/* text */
+.renmin h1,
+.renmin h2,
+.renmin h3,
+.renmin h4,
+.renmin h5,
+.renmin h6{
+    font-weight: lighter;
+}
+
+.renmin ul,
+.renmin li{
+    list-style: none;
+}
+
+
+/* form */
+.renmin input,
+.renmin button{
+    border-radius: .3em;
+}

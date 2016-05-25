@@ -1,0 +1,26 @@
+<span class="small-12 medium-6 medium-offset-3 column">
+    <h2 class="text-center">User index</h2>
+    <hr/>
+
+    <a class="row button tiny success" href="/#user/create">Create</a>
+    <table class="row">
+        <thead>
+            <td>Index</td>
+            <td>Username</td>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td></td>
+        </thead>
+        <tbody ng-init="orderby('id')">
+            <tr ng-repeat="item in users | orderBy:predicate:!reverse | filter:search | orderBy: orderedby:!reverse">
+                <td>{{$index}}</td>
+                <td>{{item.username}}</td>
+                <td>{{item.firstname}}</td>
+                <td>{{item.lastname}}</td>
+                <td><a class="button tiny info" href="/#user/show/{{item._id}}">Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</span>
+

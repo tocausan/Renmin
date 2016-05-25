@@ -1,0 +1,82 @@
+doctype html
+
+<!--[if lt IE 7]>
+html(ng-lang='{{language}}' ng-app="renmin" ng-cloak ng-controller="baseCtrl" class="ng-cloak no-js lt-ie9 lt-ie8 lt-ie7")
+<![endif]-->
+<!--[if IE 7]>
+html(ng-lang='{{language}}' ng-app="renmin" ng-cloak ng-controller="baseCtrl" class="ng-cloak no-js lt-ie9 lt-ie8")
+<![endif]-->
+<!--[if IE 8]>
+html(ng-lang='{{language}}' ng-app="renmin" ng-cloak ng-controller="baseCtrl" class="ng-cloak no-js lt-ie9")
+<![endif]-->
+<!--[if gt IE 8]><!-->
+html(ng-lang='{{language}}' ng-app="renmin" ng-cloak ng-controller="baseCtrl" class="ng-cloak no-js" ng-init="language = 'fr-fr'")
+<!--<![endif]-->
+
+html.renmin
+    head
+        title= title
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        <!-- foundation style -->
+        link(rel='stylesheet', href='/bower_components/foundation/css/foundation.min.css')
+        <!-- app style -->
+        link(rel='stylesheet', href='/assets/styles/font-face.css')
+        link(rel='stylesheet', href='/assets/styles/renmin.css')
+        link(rel='stylesheet', href='/assets/styles/index.css')
+
+        <!-- script -->
+        script(src='/bower_components/angular/angular.js')
+        script(src='/bower_components/angular-animate/angular-animate.min.js')
+        script(src='/bower_components/angular-route/angular-route.js')
+        script(src='/bower_components/angular-translate/angular-translate.min.js')
+        script(src='/bower_components/angular-i18n/angular-locale_fr-fr.js')
+
+    body
+        block content
+
+        footer
+            small
+                a(href='/log?angular=false') angular
+
+            <!-- modernizer script-->
+            script(src='/bower_components/modernizr/modernizr.js')
+            <!-- jquery script-->
+            script(src='/bower_components/jquery/dist/jquery.min.js')
+            <!-- foundation script -->
+            script(src='/bower_components/foundation/js/foundation/foundation.js')
+            script(src='/bower_components/foundation/js/foundation/foundation.topbar.js')
+            script(src='/bower_components/foundation/js/foundation/foundation.dropdown.js')
+            <!-- socket.io script -->
+            script(src='/socket.io/socket.io.js')
+            <!-- parallax script -->
+            script(src='/bower_components/parallax.js/parallax.min.js')
+            <!-- app script -->
+            script(src='/assets/scripts/foundation-setup.js')
+
+            <!-- angular script -->
+            script(src='/angular_components/app.js')
+            script(src='/angular_components/version/version.js')
+            script(src='/angular_components/version/version-directive.js')
+            script(src='/angular_components/version/interpolate-filter.js')
+            script(src='/angular_components/translation/translation.js')
+            script(src='/angular_components/translation/translation-en-us.js')
+            script(src='/angular_components/translation/translation-fr-fr.js')
+            script(src='/angular_components/translation/translation-zh-chs.js')
+            script(src='/angular_components/config/route.js')
+            script(src='/angular_components/config/route-security.js')
+            script(src='/angular_components/provider/api.js')
+
+            script(src='/angular_components/controller/base-controller.js')
+            script(src='/angular_components/controller/home/index-controller.js')
+            script(src='/angular_components/controller/sign/index-controller.js')
+            script(src='/angular_components/controller/log/index-controller.js')
+            script(src='/angular_components/controller/profile/index-controller.js')
+            script(src='/angular_components/controller/user/index-controller.js')
+            script(src='/angular_components/controller/user/create-controller.js')
+            script(src='/angular_components/controller/user/show-controllerl.js')
+            script(src='/angular_components/controller/user/edit-controller.js')
+            script(src='/angular_components/controller/post/index-controller.js')
+            script(src='/angular_components/controller/post/create-controller.js')
+            script(src='/angular_components/controller/post/show-controllerl.js')
+            script(src='/angular_components/controller/post/edit-controller.js')
+

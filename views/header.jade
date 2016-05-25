@@ -1,0 +1,32 @@
+nav(class='top-bar fixed' data-topbar role='navigation')
+    section(class='top-bar-section')
+
+        li(class='left')
+            a(href='/') Home
+        if !auth
+            li(class='right')
+                a(href='/log/in') Login
+            li(class='right')
+                a(href='/sign/in') Signin
+
+        if auth
+            li(class='right has-dropdown')
+                a(href='/profile')
+                    if auth.avatar
+                        div(class='avatar-small' style='background: url(#{auth.avatar}); background-size: 100% 100%; display: inline-block')
+                    else
+                        div(class='avatar-small' style='background: url(http://localhost:3100/assets/default/avatar.jpg); background-size: 100% 100%; display: inline-block')
+                ul(class='dropdown')
+                    li(class='left')
+                        a(href='/profile') Profile
+
+                    if auth.status >= 2
+                        li(class='left')
+                            a(href='/post') Posts
+                        li(class='left')
+                            a(href='/user') Users
+                        li(class='left')
+                            a(href='/chat') Chat
+
+                    li(class='left')
+                        a(href='/log/out') Logout

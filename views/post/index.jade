@@ -1,0 +1,11 @@
+extends ../layout/row
+
+block content
+    span(class='small-12 columns')
+        h1(class='text-center') #{title}
+
+        - each category, i in categories
+            a(href='/post/category/#{category.url_name}')
+                div(class='post-preview') #{category.name}
+
+

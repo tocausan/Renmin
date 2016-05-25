@@ -1,0 +1,22 @@
+<span class="small-12 medium-6 medium-offset-3 column">
+    <h2 class="text-center">Settings</h2>
+    <hr/>
+
+    <span ng-if="!loggedin">
+        <!-- login -->
+        <span ng-include="'components/partials/parts/login-password.html'"></span>
+    </span>
+
+
+    <span ng-if="loggedin">
+        <!-- setting profile -->
+        <span ng-include="'components/partials/parts/setting-profile.html'"></span>
+
+        <hr/>
+
+        <!-- setting security -->
+        <span ng-include="'components/partials/parts/setting-security.html'"></span>
+    </span>
+
+
+</span>

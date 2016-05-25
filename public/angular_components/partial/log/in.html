@@ -1,0 +1,30 @@
+<span class="small-12 medium-6 medium-offset-3 column">
+    <h3>{{'Login' | translate}}</h3>
+    <hr/>
+
+     <form>
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">{{'Username' | translate}}</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="auth.username"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">{{'Password' | translate}}</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="auth.password"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-12 columns text-center">
+                <a class="button info postfix" ng-click="login()">{{'Login' | translate}}</a>
+            </span>
+        </span>
+     </form>
+</span>

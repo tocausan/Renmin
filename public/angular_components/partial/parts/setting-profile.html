@@ -1,0 +1,70 @@
+<form>
+    <h3>Profile</h3>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Firstname</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.profile.firstname"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Lastname</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.profile.lastname"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Age</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="number" ng-model="user.profile.age"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Sex</label>
+            </span>
+            <span class="small-8 columns">
+                <span class="small-12 columns">
+                    <input type="radio" name="sex" id="sex.man" value="man" ng-model="user.profile.sex"/>
+                    <label for="sex.man">Man</label>
+                </span>
+                <span class="small-12 columns">
+                    <input type="radio" name="sex" id="sex.woman" value="woman" ng-model="user.profile.sex"/>
+                    <label for="sex.woman">Woman</label>
+                </span>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Address</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.profile.address"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Description</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <textarea name="" id="" cols="30" rows="5" ng-model="user.profile.description"></textarea>
+            </span>
+        </span>
+
+        <span class="row" ng-if="hasChanged.userProfile">
+            <span class="small-12 columns text-center">
+                <a class="button info" ng-click="update.profile()">Update profile</a>
+            </span>
+        </span>
+</form>

@@ -1,0 +1,19 @@
+extends ../layout/row
+
+block content
+    span(class='small-12 medium-6 medium-offset-3 columns')
+        h1(class='text-center') #{title}
+
+        div(class='small-12 columns')
+            div(class='small-6 columns')
+                a(class='button tiny secondary postfix' href='/post') Back
+
+        form(class='small-12 columns left' action="/post/edit-image/id/#{post._id}" method="POST" enctype="multipart/form-data")
+            div(class='small-12 columns')
+                label(class='button tiny info right postfix' for='image') Select a file
+                input(class='button tiny info right postfix hidden-for-small-up' type="file" id='image' name="image")
+            div(class='small-12 columns')
+                input(class='button tiny success right postfix' type="submit" value="Upload")
+
+
+

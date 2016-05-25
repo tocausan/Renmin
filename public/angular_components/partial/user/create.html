@@ -1,0 +1,84 @@
+<span class="small-12 medium-6 medium-offset-3 column">
+    <h2 class="text-center">Create a user</h2>
+    <hr/>
+
+
+    <form>
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Username</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.username"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Firstname</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.firstname"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Lastname</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.lastname"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Age</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="number" ng-model="user.age"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Sex</label>
+            </span>
+            <span class="small-8 columns">
+                <span class="small-12 columns">
+                    <input type="radio" name="sex" id="sex.man" value="man" ng-model="user.sex"/>
+                    <label for="sex.man">Man</label>
+                </span>
+                <span class="small-12 columns">
+                    <input type="radio" name="sex" id="sex.woman" value="woman" ng-model="user.sex"/>
+                    <label for="sex.woman">Woman</label>
+                </span>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Address</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="text" ng-model="user.address"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Description</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <textarea name="" id="" cols="30" rows="5" ng-model="user.description"></textarea>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-12 columns text-center">
+                <a class="button tiny success" ng-click="create()">Create</a>
+                <a class="button tiny secondary" href="/#user">Cancel</a>
+            </span>
+        </span>
+    </form>
+</span>

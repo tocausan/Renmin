@@ -1,0 +1,45 @@
+<span class="small-12 medium-6 medium-offset-3 column">
+    <h2 class="text-center">User details</h2>
+
+    <hr/>
+
+
+    <table class="row">
+        <tr>
+            <td>Username</td>
+            <td>{{user.username}}</td>
+        </tr>
+        <tr>
+            <td>Firstname</td>
+            <td>{{user.firstname}}</td>
+        </tr>
+        <tr>
+            <td>Lastname</td>
+            <td>{{user.lastname}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{user.age}}</td>
+        </tr>
+        <tr>
+            <td>Sex</td>
+            <td>{{user.sex}}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{user.address}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{user.description}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a class="button tiny info" href="/#user/edit/{{user._id}}">Edit</a>
+                <a class="button tiny secondary" href="/#user">Back</a>
+            </td>
+        </tr>
+    </table>
+
+
+</span>

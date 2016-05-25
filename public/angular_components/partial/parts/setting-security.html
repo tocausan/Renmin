@@ -1,0 +1,36 @@
+<form>
+    <h3>Security</h3>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Old password</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="password" ng-model="user.security.oldPassword"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">New password</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="password" ng-model="user.security.newPassword"/>
+            </span>
+        </span>
+
+        <span class="row">
+            <span class="small-4 columns">
+                <label class="right inline">Password confirmation</label>
+            </span>
+            <span class="small-8 columns text-left">
+                <input type="password" ng-model="user.security.passConf"/>
+            </span>
+        </span>
+
+        <span class="row" ng-if="hasChanged.userSecurity">
+            <span class="small-12 columns text-center">
+                <a class="button info" ng-click="update.security()">Update password</a>
+            </span>
+        </span>
+</form>

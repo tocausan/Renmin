@@ -1,0 +1,17 @@
+extends ../layout/row
+
+block content
+    span(class='small-12 columns')
+        h1(class='text-center') #{title}
+
+        a(href='/post/create')
+            div(class='post-preview') Create a new post
+
+        - each post, i in posts
+            a(href='/post/id/#{post._id}')
+                div(class='post-preview' style='background: url(#{post.preview_image}); background-size: 100% 100%; display: inline-block; overflow: hidden')
+                    if post.display != true
+                        small(style='font-size: 16px; color: rgba(255,100,100,1); background-color: rgba(255,255,255,.8); padding: 5px; overflow: hidden; border-radius: .3em; max-height: 80%') not displayed
+                    h2(style='background-color: rgba(255,255,255,.5); overflow: hidden; border-radius: .3em; max-height: 80%')= post.name
+
+

@@ -1,0 +1,37 @@
+doctype html
+html.renmin
+    head
+        title= title
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        <!-- foundation style -->
+        link(rel='stylesheet', href='/bower_components/foundation/css/foundation.min.css')
+        <!-- app style -->
+        link(rel='stylesheet', href='/assets/styles/font-face.css')
+        link(rel='stylesheet', href='/assets/styles/renmin.css')
+        link(rel='stylesheet', href='/assets/styles/index.css')
+
+    body
+        header
+            include ../header
+        block structure
+
+        footer
+            small
+                a(href='/log?angular=true')
+                    strike angular
+
+            <!-- modernizer script-->
+            script(src='/bower_components/modernizr/modernizr.js')
+            <!-- jquery script-->
+            script(src='/bower_components/jquery/dist/jquery.min.js')
+            <!-- foundation script -->
+            script(src='/bower_components/foundation/js/foundation/foundation.js')
+            script(src='/bower_components/foundation/js/foundation/foundation.topbar.js')
+            script(src='/bower_components/foundation/js/foundation/foundation.dropdown.js')
+
+            <!-- socket.io script -->
+            script(src='/socket.io/socket.io.js')
+            <!-- parallax script -->
+            script(src='/bower_components/parallax.js/parallax.min.js')
+            <!-- app script -->
+            script(src='/assets/scripts/foundation-setup.js')

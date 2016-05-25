@@ -1,0 +1,16 @@
+extends ../../layout/row
+
+block content
+    span(class='small-12 columns')
+        h1(class='text-center') #{title}
+
+
+
+        div(class='small-12 columns')
+
+            - each post, i in posts
+                a(href='homepage/edit/id/#{post._id}')
+                    div(class='post-preview' style='background: url("#{post.image}"); background-size: 100% 100%; display: inline-block') #{post.title}
+
+            a(href='homepage/create')
+                div(class='post-preview') Create a new post

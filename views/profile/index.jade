@@ -1,0 +1,20 @@
+extends ../layout/row
+
+block content
+    span(class='small-12 medium-6 medium-offset-3 columns')
+        h1(class='text-center') #{title}
+
+        div(class='small-12 columns text-center')
+            if auth.preview_image
+                div(class='avatar-medium' style='background: url(#{auth.preview_image}); background-size: 100% 100%; display: inline-block')
+            else
+                div(class='avatar-medium' style='background: url(http://localhost:3100/assets/default/avatar.jpg); background-size: 100% 100%; display: inline-block')
+
+            ul
+                li #{auth.email}
+                li #{auth.username}
+                li #{auth.firstname}
+                li #{auth.lastname}
+
+        div(class='small-12 columns')
+            a(class='button tiny info postfix', href='/profile/edit') Edit
