@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tocausan/Renmin/master/public/assets/uploads/logos/tocausan-renmin.png" width="350"/>
+</p>
+
 # Renmin
 An ExpressJS and AngularJS multi-user level seed app.
 
